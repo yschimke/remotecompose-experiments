@@ -101,6 +101,9 @@ public:
         auto it = mFloats.find(id);
         return it != mFloats.end() ? it->second : 0.0f;
     }
+    bool hasFloat(int id) const {
+        return mFloats.find(id) != mFloats.end();
+    }
 
     void loadInteger(int id, int value) {
         if (mIntegerOverrides.count(id)) return;
